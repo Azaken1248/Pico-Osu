@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pico Osu! - My Awesome 8-Bit Game Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Press Start 2P', cursive; 
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #1a1a2e;
+            color: #e0e0e0; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box; 
+        }
+
+        h1 {
+            color: #ff66aa; 
+            text-shadow: 2px 2px #00bfff; 
+            margin-bottom: 15px;
+            font-size: 2em; 
+        }
+
+        p {
+            color: #c0c0c0;
+            margin-bottom: 25px;
+            line-height: 1.5;
+            max-width: 700px; 
+        }
+
+        .game-container {
+            width: 95%;
+            max-width: 800px; 
+            margin: 20px auto;
+            border: 4px solid #00bfff; 
+            box-shadow: 8px 8px 0px 0px #ff66aa; 
+            background-color: #2a2a4a; 
+            border-radius: 8px; 
+            overflow: hidden;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            display: block;
+            background-color: #000; 
+            border-radius: 4px;
+        }
+
+    
+        .info-section {
+            background-color: #2a2a4a;
+            border: 2px solid #00bfff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 30px;
+            width: 95%;
+            max-width: 800px;
+            box-shadow: 4px 4px 0px 0px #ff66aa;
+            text-align: left;
+            box-sizing: border-box;
+        }
+
+        .info-section h2 {
+            color: #ff66aa;
+            text-shadow: 1px 1px #00bfff;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+
+        .control-panel{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 30px;
+        }
+
+        .info-section .control-icon {
+            font-size: 1.3em; 
+            color: #00bfff;
+            text-shadow: 1px 1px #ff66aa;
+            text-align: center; 
+        }
+
+        .info-section a {
+            color: #00bfff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .info-section a:hover {
+            text-decoration: underline;
+        }
+
+        .credits-panel{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5em;
+            }
+            p {
+                font-size: 0.9em;
+            }
+            iframe {
+                height: 400px; 
+            }
+            .game-container, .info-section {
+                padding: 5px;
+                box-shadow: 4px 4px 0px 0px #ff66aa;
+            }
+            .info-section h2 {
+                font-size: 1.2em;
+            }
+            .info-section .control-icon {
+                font-size: 1.2em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.2em;
+            }
+            p {
+                font-size: 0.8em;
+            }
+            iframe {
+                height: 300px; 
+            }
+            .info-section h2 {
+                font-size: 1em;
+            }
+            .info-section ul li {
+                grid-template-columns: 25px 1fr;
+                font-size: 0.8em;
+            }
+            .info-section .control-icon {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to Pico Osu!</h1>
+
+    <p>Get ready to dive into the pixelated world of this awesome PICO-8 game, embedded right here for your enjoyment!</p>
+
+    <div class="game-container">
+        <iframe src="azakengame.html" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" allow="autoplay"></iframe>
+    </div>
+
+    <div class="info-section">
+        <h2>About Osu!</h2>
+        <p>
+            Osu! is a rhythm game where players click circles, slide sliders, and spin spinners to the beat of music.
+            The goal is to hit targets accurately and in time with the song to earn points and achieve a high score.
+            It's a test of rhythm, precision, and hand-eye coordination!
+        </p>
+        <p style="font-size: 0.9em; color: #ffdd00;">
+            <strong>Note:</strong> This PICO-8 version currently focuses on the core tapping mechanics. Audio, complex sliders, and spinners are not yet implemented.
+            You can adjust Approach Rate (AR) and Overall Difficulty (OD) in the game's internal options to customize your challenge!
+        </p>
+        <h2>Controls</h2>
+        <div class="control-panel">
+            <div class="control"><span class="control-icon">🖱️</span> <span><strong>Aim:</strong> Use your <strong>Mouse</strong> to move the cursor and aim at targets.</span></div>
+            <div class="control"><span class="control-icon">[Z][X]</span> <span><strong>Tap/Select:</strong> Press <strong>Z</strong> or <strong>X</strong> on your keyboard, or click the <span class="control-icon" style="display:inline-block; margin:0; min-width:auto; text-shadow:none;">(LMB)</span> <strong>Left Mouse Button</strong> to hit circles and activate sliders.</span></div>
+            <div class="control"><span class="control-icon">[~]</span> <span><strong>Pause:</strong> Press the <strong>` (backtick)</strong> key to pause or unpause the game.</span></div>
+        </div>
+            
+        <h2>Links</h2>
+        <div class="credits-panel">
+            <div><span>Original Osu! Game Download: <a href="https://osu.ppy.sh/home/download" target="_blank">Download Osu!</a></span></div>
+            <div><span>Source Code for this PICO-8 Game (by Azaken): <a href="https://www.lexaloffle.com/bbs/?tid=47743" target="_blank">Azaken's PICO-8 Game Source</a></span></div>
+        </div>
+        
+
+    </div>
+
+    <p>Stay tuned for more retro fun and high scores!</p>
+
+</body>
+</html>
