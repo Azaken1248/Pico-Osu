@@ -11,6 +11,11 @@ def serve_index():
     return send_from_directory(BASE_DIR, 'index.html')
 
 
+@app.route("/azakengame.html")
+def serve_game():
+    return send_from_directory(BASE_DIR, 'azakengame.html')
+
+
 @app.route('/code')
 def serve_code():
     return send_from_directory(BASE_DIR, 'code.html')
